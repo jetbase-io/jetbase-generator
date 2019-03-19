@@ -1,0 +1,7 @@
+Description:
+  Creates a new JetBase application based on the selected options
+
+Example:
+  jetbase
+
+  This will compose jetbase:client, jetbase:server to scaffold a full application

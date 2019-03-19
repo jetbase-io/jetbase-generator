@@ -1,0 +1,7 @@
+Description:
+    Creates a new JetBase client side application based on the selected options
+
+Example:
+    jetbase client
+
+    This will create a client app

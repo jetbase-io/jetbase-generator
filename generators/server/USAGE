@@ -1,0 +1,7 @@
+Description:
+    Creates a new JetBase server side application based on the selected options
+
+Example:
+    jetbase server
+
+    This will create a server side app

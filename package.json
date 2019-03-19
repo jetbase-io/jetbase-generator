@@ -1,0 +1,58 @@
+{
+  "name": "jetbase-generator",
+  "version": "1.0.0",
+  "description": "Express.js/Rails + React in one handy generator",
+  "files": [
+    "cli",
+    "generators"
+  ],
+  "keywords": [
+    "yeoman-generator",
+    "React",
+    "Angular",
+    "Webpack",
+    "Docker",
+    "Express.js",
+    "Ruby on Rails"
+  ],
+  "homepage": "https://www.jetbase.io/",
+  "bugs": "https://github.com/jetbase-io/jetbase-generator/issues",
+  "author": {
+    "name": "JetBase Team",
+    "email": "",
+    "url": "https://github.com/jetbase-io"
+  },
+  "main": "cli/jetbase.js",
+  "bin": {
+    "jetbase": "./cli/jetbase.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jetbase-io/jetbase-generator.git"
+  },
+  "scripts": {
+    "eslint": "eslint ."
+  },
+  "dependencies": {
+    "chalk": "2.4.2",
+    "commander": "2.19.0",
+    "didyoumean": "1.2.1",
+    "download-git-repo": "^1.1.0",
+    "lodash": "4.17.11",
+    "meow": "5.0.0",
+    "semver": "5.6.0",
+    "shelljs": "0.8.3",
+    "yeoman-environment": "2.3.4",
+    "yeoman-generator": "3.2.0"
+  },
+  "devDependencies": {
+    "eslint": "5.14.1",
+    "eslint-config-airbnb-base": "13.1.0",
+    "eslint-plugin-import": "2.16.0"
+  },
+  "engines": {
+    "node": ">=8.10.0",
+    "npm": ">=5.6.0"
+  },
+  "license": "MIT"
+}

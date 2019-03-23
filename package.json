@@ -1,5 +1,5 @@
 {
-  "name": "jetbase-generator",
+  "name": "@jetbase/generator",
   "version": "1.0.0",
   "description": "Build full stack application based on popular frameworks in a minute",
   "files": [
@@ -17,12 +17,10 @@
     "fullstack"
   ],
   "homepage": "https://www.jetbase.io/",
-  "bugs": "https://github.com/jetbase-io/jetbase-generator/issues",
-  "author": {
-    "name": "JetBase Team",
-    "email": "info@jetbase.io",
-    "url": "https://github.com/jetbase-io"
+  "bugs": {
+    "url": "https://github.com/jetbase-io/jetbase-generator/issues"
   },
+  "author": "JetBase Team <info@jetbase.io> (https://github.com/jetbase-io)",
   "main": "cli/jetbase.js",
   "bin": {
     "jetbase": "./cli/jetbase.js"

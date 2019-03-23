@@ -1,7 +1,7 @@
 {
   "name": "jetbase-generator",
   "version": "1.0.0",
-  "description": "Express.js/Rails + React in one handy generator",
+  "description": "Build full stack application based on popular frameworks in a minute",
   "files": [
     "cli",
     "generators"
@@ -13,13 +13,14 @@
     "Webpack",
     "Docker",
     "Express.js",
-    "Ruby on Rails"
+    "Ruby on Rails",
+    "fullstack"
   ],
   "homepage": "https://www.jetbase.io/",
   "bugs": "https://github.com/jetbase-io/jetbase-generator/issues",
   "author": {
     "name": "JetBase Team",
-    "email": "",
+    "email": "info@jetbase.io",
     "url": "https://github.com/jetbase-io"
   },
   "main": "cli/jetbase.js",

@@ -13,15 +13,15 @@ function writeFiles() {
   return {
     writeFiles() {
       const that = this;
-      this.downloadFromRepo(configs[this.applicationType].repo, 'server', (err) => {
+      this.downloadFromRepo(configs[this.applicationType].repo, `${that.baseName}/server`, (err) => {
         if (that.applicationType === 'express') {
-          shelljs.exec(`npm install ${process.cwd()}/server/ --prefix ${process.cwd()}/server`, () => {
-            that.replaceContent('server/package.json', 'jetbase', that.baseName, false);
-            that.replaceContent('server/package-lock.json', 'jetbase', that.baseName, false);
-            that.createContent('server/.env', `PORT=${that.serverPort}`);
+          shelljs.exec(`npm install ${process.cwd()}/${that.baseName}/server/ --prefix ${process.cwd()}/${that.baseName}/server`, () => {
+            that.replaceContent(`${that.baseName}/server/package.json`, 'jetbase', that.baseName, false);
+            that.replaceContent(`${that.baseName}/server/package-lock.json`, 'jetbase', that.baseName, false);
+            that.createContent(`${that.baseName}/server/.env`, `PORT=${that.serverPort}`);
           });
         } else {
-          shelljs.exec(`${process.cwd()}/server/bin/bundle install`);
+          shelljs.exec(`${process.cwd()}/${that.baseName}/server/bin/bundle install`);
         }
       });
     }

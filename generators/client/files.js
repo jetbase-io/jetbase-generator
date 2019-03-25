@@ -12,11 +12,11 @@ module.exports = {
 
 function writeFiles() {
   const that = this;
-  this.downloadFromRepo(configs[this.clientFramework].repo, 'client', (err) => {
-    shelljs.exec(`npm install ${process.cwd()}/client/ --prefix ${process.cwd()}/client`, () => {
-      that.replaceContent('client/package.json', 'jetbase', that.baseName, false);
-      that.replaceContent('client/package-lock.json', 'jetbase', that.baseName, false);
-      that.createContent('client/.env', `REACT_APP_API_SERVER=http://localhost:${that.serverPort}`);
+  this.downloadFromRepo(configs[this.clientFramework].repo, `${that.baseName}/client`, (err) => {
+    shelljs.exec(`npm install ${process.cwd()}/${that.baseName}/client/ --prefix ${process.cwd()}/${that.baseName}/client`, () => {
+      that.replaceContent(`${that.baseName}/client/package.json`, 'jetbase', that.baseName, false);
+      that.replaceContent(`${that.baseName}/client/package-lock.json`, 'jetbase', that.baseName, false);
+      that.createContent(`${that.baseName}/client/.env`, `REACT_APP_API_SERVER=http://localhost:${that.serverPort}`);
     });
   });
 }

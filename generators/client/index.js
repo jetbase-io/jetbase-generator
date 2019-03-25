@@ -92,8 +92,8 @@ module.exports = class extends BaseBlueprintGenerator {
     return {
       end() {
         this.log(chalk.green.bold('\nClient application generated successfully.\n'));
-        const logMsg = `Start your Webpack development server with:\n ${chalk.yellow.bold('npm start')}\n`;
-        this.log(chalk.green(logMsg));
+        this.log(chalk.green(`Install dependencies with:\n ${chalk.yellow.bold('npm install')}\n`));
+        this.log(chalk.green(`Start your Webpack development server with:\n ${chalk.yellow.bold('npm start')}\n`));
       }
     };
   }

@@ -89,11 +89,12 @@ module.exports = class extends BaseBlueprintGenerator {
       end() {
         this.log(chalk.green.bold('\nServer application generated successfully.\n'));
         if (this.applicationType === 'rails') {
-          const logMsg = `Start your server with:\n ${chalk.yellow.bold(`bundle exec rails s -p ${this.serverPort}`)}\n`;
-          this.log(chalk.green(logMsg));
+          this.log(chalk.green(`Install dependencies with:\n ${chalk.yellow.bold('bundle install')}\n`));
+          this.log(chalk.green(`Run migrations with:\n ${chalk.yellow.bold('bundle exec rake db:migrate')}\n`));
+          this.log(chalk.green(`Start your server with:\n ${chalk.yellow.bold(`bundle exec rails s -p ${this.serverPort}`)}\n`));
         } else {
-          const logMsg = `Start your server with:\n ${chalk.yellow.bold('npm start')}\n`;
-          this.log(chalk.green(logMsg));
+          this.log(chalk.green(`Install dependencies with:\n ${chalk.yellow.bold('npm install')}\n`));
+          this.log(chalk.green(`Start your server with:\n ${chalk.yellow.bold('npm start')}\n`));
         }
       }
     };

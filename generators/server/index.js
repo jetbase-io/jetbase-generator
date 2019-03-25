@@ -13,16 +13,15 @@ module.exports = class extends BaseBlueprintGenerator {
   _initializing() {
     return {
       setupServerconsts() {
-        const configuration = this.getAllConfig(this, true);
-        this.applicationType = configuration.get('applicationType') || this.configOptions.applicationType;
+        this.applicationType = this.configOptions.applicationType;
         if (!this.applicationType) {
           this.applicationType = 'rails';
         }
-        this.serverPort = configuration.get('serverPort');
+        this.serverPort = this.configOptions.serverPort;
         if (this.serverPort === undefined) {
-          this.serverPort = '8080';
+          this.serverPort = '99999';
         }
-        const baseName = configuration.get('baseName');
+        const baseName = this.configOptions.baseName;
         if (baseName) {
           this.baseName = baseName;
         }

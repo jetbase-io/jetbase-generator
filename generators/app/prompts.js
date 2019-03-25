@@ -25,7 +25,7 @@ function askForServerPort() {
   this.prompt(prompts).then((props) => {
     this.serverPort = props.serverPort;
     if (this.serverPort === undefined) {
-      this.serverPort = '8080';
+      this.serverPort = defaultPort;
     }
     done();
   });

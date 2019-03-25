@@ -6,7 +6,6 @@ module.exports = class extends BaseGenerator {
     super(args, opts);
     this.configOptions = {};
     this.isDebugEnabled = this.configOptions.isDebugEnabled = this.options.debug;
-    this.experimental = this.configOptions.experimental = this.options.experimental;
   }
 
   get initializing() {
@@ -27,13 +26,20 @@ module.exports = class extends BaseGenerator {
     return {
       askForModuleName: prompts.askForModuleName,
       askForServerPort: prompts.askForServerPort,
+      setSharedConfigOptions() {
+        this.configOptions.applicationType = this.applicationType;
+        this.configOptions.baseName = this.baseName;
+        this.configOptions.serverPort = this.serverPort;
+      }
     };
   }
 
   get configuring() {
     return {
       setup() {
+        this.configOptions.applicationType = this.applicationType;
         this.configOptions.baseName = this.baseName;
+        this.configOptions.serverPort = this.serverPort;
         this.configOptions.logo = false;
         this.generatorType = 'app';
       },

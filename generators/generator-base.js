@@ -101,8 +101,4 @@ module.exports = class extends PrivateBase {
     dest.logo = context.configOptions.logo;
     dest.isDebugEnabled = context.configOptions.isDebugEnabled || context.options.debug;
   }
-
-  getAllConfig(generator = this, force) {
-    return utils.getAllConfig(generator, force);
-  }
 };

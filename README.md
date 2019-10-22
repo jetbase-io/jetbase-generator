@@ -11,7 +11,8 @@ Generate front-end application (SPA and backend) based on most popular framework
 Supported backends:
 
 * Express.js + MongoDB
-* Ruby on Rails
+* Ruby on Rails + PostgreSQL
+* Laravel + PostgreSQL
 
 Supported front-ends:
 

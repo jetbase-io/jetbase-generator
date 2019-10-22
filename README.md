@@ -24,6 +24,7 @@ Supported front-ends:
 
 * Node 8
 * Git
+* MongoDB / PostgreSQL
 
 ### Installation
 

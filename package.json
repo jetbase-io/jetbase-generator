@@ -37,7 +37,7 @@
     "commander": "2.19.0",
     "didyoumean": "1.2.1",
     "download-git-repo": "^1.1.0",
-    "lodash": "4.17.11",
+    "lodash": "^4.17.15",
     "meow": "5.0.0",
     "semver": "5.6.0",
     "shelljs": "0.8.3",

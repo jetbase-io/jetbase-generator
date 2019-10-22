@@ -92,6 +92,10 @@ module.exports = class extends BaseBlueprintGenerator {
           this.log(chalk.green(`Install dependencies with:\n ${chalk.yellow.bold('bundle install')}\n`));
           this.log(chalk.green(`Run migrations with:\n ${chalk.yellow.bold('bundle exec rake db:migrate')}\n`));
           this.log(chalk.green(`Start your server with:\n ${chalk.yellow.bold(`bundle exec rails s -p ${this.serverPort}`)}\n`));
+        } else if (this.applicationType === 'laravel') {
+          this.log(chalk.green(`Install dependencies with:\n ${chalk.yellow.bold('composer install')}\n`));
+          this.log(chalk.green(`Run migrations with:\n ${chalk.yellow.bold('php artisan migrate')}\n`));
+          this.log(chalk.green(`Start your server with:\n ${chalk.yellow.bold(`php artisan serve --port=${this.serverPort}`)}\n`));
         } else {
           this.log(chalk.green(`Install dependencies with:\n ${chalk.yellow.bold('npm install')}\n`));
           this.log(chalk.green(`Start your server with:\n ${chalk.yellow.bold('npm start')}\n`));

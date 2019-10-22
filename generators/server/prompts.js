@@ -16,6 +16,10 @@ function askForServerSideOpts() {
         {
           value: 'rails',
           name: 'Ruby on Rails + PostgreSQL'
+        },
+        {
+          value: 'laravel',
+          name: 'Laravel + PostgreSQL'
         }
       ],
       default: 'rails'

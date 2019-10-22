@@ -6,6 +6,9 @@ const configs = {
   },
   rails: {
     repo: 'github:jetbase-io/jetbase-rails'
+  },
+  laravel: {
+    repo: 'github:jetbase-io/jetbase-laravel-rest'
   }
 };
 

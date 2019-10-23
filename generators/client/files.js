@@ -3,6 +3,9 @@ const shelljs = require('shelljs');
 const configs = {
   react: {
     repo: 'github:jetbase-io/jetbase-react'
+  },
+  vue: {
+    repo: 'github:jetbase-io/jetbase-vue'
   }
 };
 

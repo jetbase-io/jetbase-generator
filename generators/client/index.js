@@ -91,9 +91,15 @@ module.exports = class extends BaseBlueprintGenerator {
   _end() {
     return {
       end() {
-        this.log(chalk.green.bold('\nClient application generated successfully.\n'));
-        this.log(chalk.green(`Install dependencies with:\n ${chalk.yellow.bold('npm install')}\n`));
-        this.log(chalk.green(`Start your Webpack development server with:\n ${chalk.yellow.bold('npm start')}\n`));
+        if (this.clientFramework === 'react') {
+          this.log(chalk.green.bold('\nClient React application generated successfully.\n'));
+          this.log(chalk.green(`Install dependencies with:\n ${chalk.yellow.bold('npm install')}\n`));
+          this.log(chalk.green(`Start your Webpack development server with:\n ${chalk.yellow.bold('npm start')}\n`));
+        } else if (this.clientFramework === 'vue-nuxt') {
+          this.log(chalk.green.bold('\nClient Vue/Nuxt application generated successfully.\n'));
+          this.log(chalk.green(`Install dependencies with:\n ${chalk.yellow.bold('npm install')}\n`));
+          this.log(chalk.green(`Start your Nuxt development server with:\n ${chalk.yellow.bold('npm run dev')}\n`));
+        }
       }
     };
   }

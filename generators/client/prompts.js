@@ -7,6 +7,10 @@ function askForClient(meta) {
     {
       value: 'react',
       name: 'React'
+    },
+    {
+      value: 'vue',
+      name: 'Vue'
     }
   ];
 

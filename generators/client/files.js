@@ -4,7 +4,7 @@ const configs = {
   react: {
     repo: 'github:jetbase-io/jetbase-react'
   },
-  vue: {
+  'vue-nuxt': {
     repo: 'github:jetbase-io/jetbase-vue'
   }
 };

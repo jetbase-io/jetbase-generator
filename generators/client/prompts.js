@@ -9,8 +9,8 @@ function askForClient(meta) {
       name: 'React'
     },
     {
-      value: 'vue',
-      name: 'Vue'
+      value: 'vue-nuxt',
+      name: 'Vue/Nuxt'
     }
   ];
 
